@@ -9,7 +9,10 @@ export default {
     showWindow: false,
     messages: {},
     username: '',
-    windowHeight: 0
+    windowHeight: 0,
+    windowWidth: 0,
+    footerHeight: 0,
+    footerWidth: 0,
   },
 
   getters: {
@@ -18,7 +21,10 @@ export default {
     showWindow: state => state.showWindow,
     messages: state => state.messages,
     username: state => state.username,
-    windowHeight: state => state.windowHeight
+    windowHeight: state => state.windowHeight,
+    windowWidth: state => state.windowWidth,
+    footerHeight: state => state.footerHeight,
+    footerWidth: state => state.footerWidth,
   },
 
   mutations: {
@@ -37,6 +43,10 @@ export default {
     },
     setUsername: (state, username) => state.username = username,
     windowHeight: (state, windowHeight) => state.windowHeight = windowHeight,
+    windowWidth: (state, windowWidth) => state.windowWidth = windowWidth,
+    footerHeight: (state, footerHeight) => state.footerHeight = footerHeight,
+    footerWidth: (state, footerWidth) => state.footerWidth = footerWidth,
+
   },
 
   actions: {
@@ -60,6 +70,14 @@ export default {
     },
     windowHeight({ commit }, windowHeight) {
       commit('windowHeight', windowHeight)
+    },
+    windowSize({ commit }, { height, width }) {
+      commit('windowHeight', height)
+      commit('windowWidth',  width)
+    },
+    footerSize({ commit }, { height, width }) {
+      commit('footerHeight', height)
+      commit('footerWidth',  width)
     }
   }
 }

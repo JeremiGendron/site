@@ -3,14 +3,14 @@
     <v-toolbar app role="navigation" :style="{
       padding: $vuetify.breakpoint.xlOnly ? '0px 15px' : ''
     }">
-      <v-toolbar-title :class="`${$vuetify.breakpoint.xsOnly ? 'title' : $vuetify.breakpoint.xlOnly ? 'largeHeadline' : 'headline'} text-uppercase`">
+      <v-toolbar-title :class="`${$vuetify.breakpoint.xsOnly ? 'subheading' : $vuetify.breakpoint.xlOnly ? 'largeHeadline' : 'headline'} text-uppercase`">
         <router-link
           role="tab" aria-label="home"
           to="/"
           class="standardLink"
         >
-          <span>Future</span>
-          <span class="font-weight-light">Hendrix</span>
+          <span>Jeremi</span>
+          <span class="font-weight-light">Gendron</span>
         </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -78,11 +78,11 @@
       </v-btn>
     </v-toolbar>
 
-    <v-content :style="{      marginBottom: $vuetify.breakpoint.xlOnly ? '50px' : '20px' }">
+    <v-content :style="{ paddingBottom: $vuetify.breakpoint.xlOnly ? '112px' : '60px' }">
       <router-view></router-view>
     </v-content>
 
-    <v-footer>
+    <v-footer :style="{ marginBottom: $vuetify.breakpoint.xlOnly ? '72px' : '36px', paddingBottom: '42px'}">
       <Footer/>
     </v-footer>
     <v-footer fixed :style="$vuetify.breakpoint.xlOnly ? {     transformOrigin:' bottom left', transform: 'scale(2)'} : {}">
@@ -110,6 +110,10 @@ export default {
         0: "/about",
         1: "/contact",
         2: "/services"
+      },
+      windowSize: {
+        width: 0,
+        height: 0
       }
     }
   },
@@ -119,18 +123,32 @@ export default {
       this.$i18n.locale
       this.$store.dispatch('i18n/changeLanguage')
     },
-    windowHeight () {
-      this.$store.dispatch('data/windowHeight', window.innerHeight)
-      setTimeout(() => this.windowHeight(), 177)
+    onResize () {
+      this.windowSize = { width: window.innerWidth, height: window.innerHeight }
+      this.$store.dispatch('data/windowSize', this.windowSize)
+      window.addEventListener('resize', () => {
+        this.windowSize = { width: window.innerWidth, height: window.innerHeight }
+        this.$store.dispatch('data/windowSize', this.windowSize)
+      })     
     }
   },
 
+  mounted () {
+    this.onResize()
+  },
+
   created () {
+    let search = window.location.search.split('?')
+    if (search.length > 1) {
+      const page = search[1].split('page')
+      if (page.length > 0 && page[1].startsWith('=')) {
+        this.$router.push(`/${page[1].split('=')[1]}`)
+      }
+    }
     const currentLanguage = this.$store.getters['i18n/currentLanguage']
     if (!currentLanguage) this.$store.dispatch('i18n/changeLanguage')
     this.$i18n.locale = this.$store.getters['i18n/currentLanguage']
     this.$store.dispatch('data/hideWindow')
-    this.windowHeight()
   },
 
   watch: {

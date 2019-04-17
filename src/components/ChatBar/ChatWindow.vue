@@ -11,7 +11,7 @@
       bottom: $vuetify.breakpoint.xlOnly ? '72px' : '36px',
       left: 0,
       height: '100%',
-      maxHeight: $vuetify.breakpoint.xlOnly ? '750px' : '420px',
+      maxHeight: $vuetify.breakpoint.xlOnly ? '750px' : $vuetify.breakpoint.smAndDown ? '320px' : '420px',
       backgroundColor: '#EEEEEE',
       border: '2px solid lightgrey',
       borderBottom: '0px',
@@ -192,28 +192,9 @@ export default {
 
       if (response.status === 200) {
         this.addUserMessage(message)
-      } else {
-        console.log('failed:', response)
       }
-      /** const oReq = new XMLHttpRequest();
-      oReq.open("POST", this.baseUrl + '/chat/new/' + this.token + '/messages');
-      oReq.setRequestHeader("Content-Type", "application/json");
-      oReq.addEventListener("load", () => {
-        const response = oReq.responseText
-        const status = oReq.status
-
-        if (status === 200) {
-          this.addUserMessage(message)
-        } else {
-          console.log('failed: ', oReq.response)
-        }
-      });
-      oReq.send(JSON.stringify({
-        message
-      }))*/
     },
     async addUserMessage(message) {
-      console.log(message)
       this.$store.dispatch('data/addMessage', {
         id: Date.now().toString() + message,
         message,
@@ -243,7 +224,6 @@ export default {
           const messages = Object.keys(body.Item.messages.M)
           if (messages.length > 0) {
             messages.forEach((id) => {
-              console.log(id, this.receivedMessages)
               if (this.messages[id]) return
               this.addPlatformMessage({
                 id,
@@ -259,7 +239,7 @@ export default {
       oReq.send();
     },
     async markReadChatMessages (id) {
-      const response = await fetch(`${this.baseUrl}/chat/new/${this.token}/messages`, {
+      await fetch(`${this.baseUrl}/chat/new/${this.token}/messages`, {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -269,12 +249,6 @@ export default {
           read: [id]
         })
       })
-
-      if (response.status === 200) {
-        console.log(await response.json())
-      } else {
-        console.log('failed:', response)
-      }
     }
   }
 }

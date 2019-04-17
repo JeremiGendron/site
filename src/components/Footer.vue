@@ -52,10 +52,10 @@ export default {
     return {
       socials: ['Twitter', 'Facebook', 'LinkedIn', 'Instagram'],
       links: {
-        'Twitter': 'https://twitter.com/temp',
-        'Facebook': 'https://facebook.com/find',
-        'LinkedIn': 'https://linkedin.com/some', 
-        'Instagram': 'https://instagram.com/branding'
+        'Twitter': 'https://twitter.com/jeremigendron',
+        'Facebook': 'https://www.facebook.com/jeremigendroncom',
+        'LinkedIn': 'https://www.linkedin.com/in/jeremi-gendron-83588a150', 
+        'Instagram': 'https://instagram.com/Jeremi_Gendron'
       }
     }
   },
@@ -67,7 +67,3 @@ export default {
   },
 }
 </script>
-
-<style>
-
-</style>

@@ -29,13 +29,22 @@ export default {
     }
   },
 
+  HOME: {
+    TESTIMONIALS: {
+      TITLE: 'Témoignages'
+    },
+    STREAM: {
+      TITLE: 'Point-de-vue En Direct'
+    },
+  },
+
   CONTACT: {
-    TITLE: 'Contactez-Nous',
+    TITLE: 'Contactez-Moi',
     HOURS: "Heures d'Ouverture",
     BYEMAIL: 'Par E-mail',
     BYPHONE: 'Par Téléphone',
-    CALLUS1: 'Appelez-nous au ',
-    CALLUS2: " pendant nos Heures d'Ouverture.",
+    CALLUS1: 'Appelez-moi au ',
+    CALLUS2: " pendant mes Heures d'Ouverture.",
     NUMBER: '+1 (514) 555-5555',
     MESSAGE: {
       REQUIRED: 'Message requis',
@@ -44,8 +53,11 @@ export default {
   },
 
   ABOUT: {
-    TITLE: '',
-    TEAM: 'Équipe',
+    DESCRIPTION: 'Ici pour vous aider avec vos besoins de systèmes et logiciels.',
+    DESCRIPTION21: `Vous dire que je puisse faire ceci ou cela ne serait sûrement pas mise ici, alors j'ai construit ce site web moi-même pour cette raison, de A à Z. Pour les doués en technologie, visitez mon `,
+    GITHUB: `monorépositoire sur github`,
+    DESCRIPTION22: ` pour voir le code utilisé pour ce site. Pour ceux qui ne le sont pas: ceci est un simple site web, fait avec des technologies la plupart gratuites et à l'aide du Cloud pour réduire le coût d'opération.`,
+    TEAM: 'Salut!',
     JEREMI: {
       ROLE: 'Fondateur'
     }
@@ -69,7 +81,7 @@ export default {
   },
 
   CHAT: {
-    WITHME: 'chatter avec nous',
+    WITHME: 'chatter avec moi',
     START: 'Chatter',
     ENTER: 'Écrire un message',
     FORM: {

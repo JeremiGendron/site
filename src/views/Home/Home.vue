@@ -6,18 +6,27 @@
       justifyContent: 'center',
       alignSelf: 'flex-start',
       width: '100%',
+      flexWrap: 'wrap',
+      marginBottom: '50px'
     }"
   >
     <SlideShow v-bind:slideShowData="slideShowData"/>
+    <Testimonials />
+    <Stream />
   </div>
 </template>
 
 <script>
-import SlideShow from '../components/SlideShow'
-  export default {
+import SlideShow from '@/components/SlideShow'
+import Testimonials from './Sections/Testimonials'
+import Stream from '@/components/Stream'
+
+export default {
     name: 'Home',
     components: {
-      SlideShow
+      SlideShow,
+      Testimonials,
+      Stream
     },
 
     data () {

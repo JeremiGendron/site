@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "hls.js": "^0.12.4",
     "vue": "^2.6.6",
     "vue-avatar": "^2.1.7",
-    "vue-carousel": "^0.18.0",
     "vue-i18n": "^8.0.0",
     "vue-router": "^3.0.1",
     "vue-worker": "^1.2.1",

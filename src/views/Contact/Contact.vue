@@ -17,35 +17,19 @@
     >
 
     </div>
-    <h2 :class="$vuetify.breakpoint.xlOnly ? 'largeHeadline' : 'headline'" 
-      :style="{
-        minWidth: '300px',
-        width: '50%',
-        maxWidth: '90%',
-        textAlign: 'left'
-      }"
-    >
-      {{$t('CONTACT.TITLE')}}
-    </h2>
+    <ResponsiveTitle :text="$t('CONTACT.TITLE')"/>
+
     <br>
-    <h3 :class="`${$vuetify.breakpoint.xlOnly ? 'largeHeading' : 'heading'}`"
-      :style="{
-        minWidth: '300px',
-        width: '50%',
-        maxWidth: '90%',
-        textAlign: 'left',
-        paddingLeft: '2px'
-      }"
-    > 
-      {{$t('CONTACT.BYEMAIL')}}
-    </h3>
+    <ResponsiveHeading :text="$t('CONTACT.BYEMAIL')"/>
+
     <br>
     <v-form
       v-model="valid"
       :style="{
         minWidth: '300px',
         width: '50%',
-        maxWidth: '90%'
+        maxWidth: '90%',
+        marginTop: '20px'
       }"
     >
       <span
@@ -101,6 +85,7 @@
         flat
         large
         :outline="!$vuetify.breakpoint.xlOnly"
+        :disabled="!valid"
         @click="submit"
         :style="$vuetify.breakpoint.xlOnly ? {
           height: '60px',
@@ -113,73 +98,43 @@
       </v-btn>
     </v-form>
     <br>
-    <div
-      :style="{
-        marginTop: $vuetify.breakpoint.xlOnly ? '50px' : '10px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minWidth: '300px',
-        width: '50%',
-        maxWidth: '90%',
-      }"
-    >
-      <h4 
-        :class="`${$vuetify.breakpoint.xlOnly ? 'largeHeading' : 'heading'}`"
-        :style="{
-          backgroundColor: 'white'
-        }"
-      >
-        {{$t('COMMON.OR').toUpperCase()}}
-      </h4>
 
-    </div>
-
-    <br><br>
-    <h3 :class="`${$vuetify.breakpoint.xlOnly ? 'largeHeading' : 'heading'}`"
-      :style="{
-        minWidth: '300px',
-        width: '50%',
-        maxWidth: '90%',
-        textAlign: 'left'
-      }"
-    >
-      {{$t('CONTACT.BYPHONE')}}
-    </h3>
+    <Or  :style="{
+      marginTop: '20px'
+    }"/>
+    
+    <ResponsiveHeading  :style="{
+      marginTop: '20px'
+    }" :text="$t('CONTACT.BYPHONE')" />
     <br>
-    <span :class="`${$vuetify.breakpoint.xlOnly ? 'largeBody2' : 'body-2'}`" 
-      :style="{
-        minWidth: '300px',
-        width: '50%',
-        maxWidth: '90%',
-        textAlign: 'left'
-      }"
-    >
-      {{$t('CONTACT.CALLUS1')}}<a :href="phoneLink" :style="{display: 'inline-block'}">{{$t('CONTACT.NUMBER')}}</a>{{$t('CONTACT.CALLUS2')}}
-    </span>
-    <br><br>
-    <h2 :class="`${$vuetify.breakpoint.xlOnly ? 'largeHeadline' : 'headline'}`" 
-      :style="{
-        minWidth: '300px',
-        width: '50%',
-        maxWidth: '90%',
-        textAlign: 'left'
-      }"
-    >
-      {{$t('CONTACT.HOURS')}}
-    </h2>
+    <ResponsiveDiv>
+      <span :class="`${$vuetify.breakpoint.xlOnly ? 'largeBody2' : 'body-2'}`">
+        {{$t('CONTACT.CALLUS1')}}<a :href="phoneLink" :style="{display: 'inline-block'}">{{$t('CONTACT.NUMBER')}}</a>{{$t('CONTACT.CALLUS2')}}
+      </span>
+    </ResponsiveDiv>
+    <ResponsiveTitle  :style="{
+      marginTop: '20px'
+    }" :text="$t('CONTACT.HOURS')"/>
     <BusinessHours/>
   </div>
 </template>
 
 <script>
-import BusinessHours from '../components/BusinessHours'
+import BusinessHours from '@/components/BusinessHours'
+import ResponsiveTitle from '@/components/Responsive/ResponsiveTitle'
+import ResponsiveHeading from '@/components/Responsive/ResponsiveHeading'
+import ResponsiveDiv from '@/components/Responsive/ResponsiveDiv'
+import Or from './Or'
 
 export default {
   name: 'Contact',
 
   components: {
-    BusinessHours
+    BusinessHours,
+    ResponsiveTitle,
+    ResponsiveHeading,
+    ResponsiveDiv,
+    Or
   },
 
   data () {

@@ -29,13 +29,22 @@ export default {
     }
   },
 
+  HOME: {
+    TESTIMONIALS: {
+      TITLE: 'Testimonials'
+    },
+    STREAM: {
+      TITLE: 'Live Point of View'
+    },
+  },
+
   CONTACT: {
-    TITLE: 'Contact Us',
+    TITLE: 'Contact Me',
     HOURS: 'Business Hours',
     BYEMAIL: 'By Email',
     BYPHONE: 'By Phone',
-    CALLUS1: 'Call us at ',
-    CALLUS2: ' during our Business Hours.',
+    CALLUS1: 'Call me at ',
+    CALLUS2: ' during my Business Hours.',
     NUMBER: '+1 (514) 555-5555',
     MESSAGE: {
       REQUIRED: 'Message is required',
@@ -44,12 +53,11 @@ export default {
   },
 
   ABOUT: {
-    TITLE: '',
-    NAME1: 'Future',
-    NAME2: 'Hendrix',
-    DESCRIPTION: ' is a startup based in Saint-Lazare, a small town mid-way between Montreal, QC and Ottawa, ON in Canada. We aim to provide a variety of services, including top-down solutions, to businesses around the world.',
-    DESCRIPTION2: 'We are a team of professionals from many fields, ready to offer you our services. We specialze Tech, Management and Marketing.',
-    TEAM: 'Team',
+    DESCRIPTION: `I'm here to help you with your software & systems needs.`,
+    DESCRIPTION21: `Just telling you that I'm good at doing this or that wouldn't really fit the bill here, so I've built this website myself for that purpose, from scratch. For the tech-savvy, visit my `,
+    GITHUB: `github monorepo`,
+    DESCRIPTION22: ` to see the code used for this site. For the people who aren't: this is a simple website, made with mostly free technologies and leveraging the Cloud to reduce operating and ownership costs.`,
+    TEAM: 'Hello!',
     JEREMI: {
       ROLE: 'Founder'
     }
@@ -73,7 +81,7 @@ export default {
   },
 
   CHAT: {
-    WITHME: 'chat with us',
+    WITHME: 'chat with me',
     START: 'Chat',
     ENTER: 'Enter chat message',
     FORM: {

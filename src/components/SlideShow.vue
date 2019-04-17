@@ -6,7 +6,6 @@
       alignItems: 'flex-start',
       justifyContent: 'center',
       width: '100%',
-      marginBottom: '50px'
     }"
   >
     <div
@@ -56,7 +55,7 @@
               maxHeight: windowHeight - 150 + 'px',
               userSelect: 'none',
               userDrag: 'none',
-              cursor: 'ew-resize',
+              cursor: 'pointer',
             }"
             @mouseover="pausing = true"
             @mouseleave="pausing = false"
@@ -178,9 +177,6 @@ export default {
       let nextSlide = this.currentSlide - 1
       if (nextSlide < 0) nextSlide = this.slideShowData.length - 1
       this.switchToSlide(nextSlide)
-    },
-    report (ev) {
-      console.log(ev)
     },
   },
 

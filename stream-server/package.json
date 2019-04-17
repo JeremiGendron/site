@@ -1,0 +1,19 @@
+{
+  "name": "stream-server",
+  "version": "1.0.0",
+  "description": "Receives mpegts stream, produces hls output and serves video",
+  "main": "ssai.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeremigendron/site/stream-server"
+  },
+  "author": "Jérémi Gendron <gendronjeremi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.438.0",
+    "express": "^4.16.4"
+  }
+}
