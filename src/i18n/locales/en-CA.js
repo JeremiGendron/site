@@ -29,6 +29,35 @@ export default {
     }
   },
 
+  SERVICES: {
+    BLOCKCHAIN: {
+      TITLE: 'Blockchain',
+      SUBTITLE: "Ethereum Smart Contracts, Private Blockchain Forks, App Integration",
+      EXAMPLES: [],
+    },
+    BLOG: {
+      TITLE: 'Blog, E-commerce & more',
+      SUBTITLE: "Wordpress, WooCommerce and Shopify Websites, Ground-up Personalized Brand Sites, Full-featured Android/iOS Apps",
+      EXAMPLES: [],
+    },
+    CUSTOM: {
+      TITLE: 'Custom enterprise software',
+      SUBTITLE: 'Private Management Applications, Customized Accounting Solutions',
+      EXAMPLES: [],
+    },
+    CLOUD: {
+      TITLE: 'Cloud',
+      SUBTITLE: 'Cloud-native Backends, Low-cost Infrastructure Deployment & Maintenance, Machine Learning Pipelines',
+      EXAMPLES: [],
+    
+    },
+    MULTIMEDIA: {
+      TITLE: 'Multimedia',
+      SUBTITLE: 'CDN Solutions, Low-latency Live Streaming, User Interaction',
+      EXAMPLES: [],
+    }
+  },
+
   HOME: {
     TESTIMONIALS: {
       TITLE: 'Testimonials'
