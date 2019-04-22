@@ -54,7 +54,7 @@ export default {
       links: {
         'Twitter': 'https://twitter.com/jeremigendron',
         'Facebook': 'https://www.facebook.com/jeremigendroncom',
-        'LinkedIn': 'https://www.linkedin.com/in/jeremi-gendron-83588a150', 
+        'LinkedIn': 'https://www.linkedin.com/in/jeremi-gendron', 
         'Instagram': 'https://instagram.com/Jeremi_Gendron'
       }
     }
