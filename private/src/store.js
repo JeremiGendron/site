@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import VuexPersist from 'vuex-persist'
 import aws from 'aws-sdk'
-import { credentials } from '../../config.js'
+import { credentials } from '../config.js'
 
 const lambda = new aws.Lambda({ region: 'us-east-2', credentials })
 const dynamoDB = new aws.DynamoDB({ region: 'us-east-2', credentials })
