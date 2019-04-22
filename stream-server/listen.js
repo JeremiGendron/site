@@ -1,12 +1,14 @@
 const fs = require('fs')
 const express = require('express')();
 
+const { auth } = require('./config')
+
 express.get('/stream/:key/:current/:file', (req, res) => {
 
   const { key, current, file } = req.params
-  const auth = req.headers['jg-auth-target']
+  const authHeader = req.headers['jg-auth-target']
 
-  if (auth !== '87ef49ca-b65f-4b7e-846c-5e0009276c1f') return
+  if (authHeader !== auth) return
 
   const isManifest = file.endsWith('8')
   const splits = req.url.split('/')
