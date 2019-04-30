@@ -30,29 +30,60 @@ export default {
   },
 
   SERVICES: {
+    POINTS: {
+      CRYPTOGRAPHY: 'cryptographie',
+      NETWORKING: 'réseautage',
+      JAVASCRIPT: 'javascript',
+      VUEJS: 'vuejs',
+      NODEJS: 'nodejs',
+      DOCUMENTATION: 'documentation',
+      FRONTEND: 'frontend',
+      SOLIDITY: 'solidity',
+      ETHEREUM: 'ethereum',
+      ARCHITECTURE: 'architecture',
+      BACKEND: 'backend',
+      AWS: 'aws',
+      LAMBDA: 'lambda',
+      DYNAMODB: 'dynamodb',
+      APIGATEWAY: 'apigateway',
+      ROUTE53: 'route53',
+      S3: 's3',
+      CLOUDFRONT: 'cloudfront',
+    },
     BLOCKCHAIN: {
       TITLE: 'Blockchain',
       SUBTITLE: "Contrats Intelligents Ethereum, Adaptations de Blockchain Privées, Applications Intégrées",
-      EXAMPLES: [],
+      EXAMPLES: {
+        ARK: {
+          DESCRIPTION: "Participer à l'effort FOSS en faisant des contributions à plusieurs répositoires Github de l'Écosystème Ark."
+        },
+        ARTDECENTER: {
+          DESCRIPTION: "Ingénieur en chef chez artdecenter, un marché décentralisé pour l'art."
+        }
+      },
     },
     BLOG: {
-      TITLE: 'Blog, E-commerce & more',
+      TITLE: 'Blog, Commerce en-ligne & plus',
       SUBTITLE: "Sites Web Wordpress, WooCommerce et Shopify, Sites de Marque Personalisés, Applications Android/iOS Complètes",
       EXAMPLES: [],
     },
     CUSTOM: {
-      TITLE: 'Custom enterprise software',
+      TITLE: 'Logiciels de gestion personnalisés',
       SUBTITLE: 'Applications de Gestion Privées, Solutions de Comptabilité Taillées',
       EXAMPLES: [],
     },
     CLOUD: {
       TITLE: 'Cloud',
       SUBTITLE: "Serveurs Dorsaux Natifs au Cloud, Déploiement et Maintenance d'Infrastructure à Bas Prix, Pipelines d'Apprentissage Automatique",
-      EXAMPLES: [],
+      EXAMPLES: {
+        THROWAWAY: {
+          DESCRIPTION: "Construction d'une applicatoin chat de haut en bas avec des salles auto-desctructives."
+        }
+      },
     
     },
     MULTIMEDIA: {
-      TITLE: 'Multimedia',
+      TITLE: 'Multimédia',
       SUBTITLE: 'Solutions CDN, Diffusion en Direct à Basse Latence, Intéraction des Utilisateurs',
       EXAMPLES: [],
     }

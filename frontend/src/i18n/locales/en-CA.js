@@ -35,10 +35,37 @@ export default {
   },
 
   SERVICES: {
+    POINTS: {
+      CRYPTOGRAPHY: 'cryptography',
+      NETWORKING: 'networking',
+      JAVASCRIPT: 'javascript',
+      VUEJS: 'vuejs',
+      NODEJS: 'nodejs',
+      DOCUMENTATION: 'documentation',
+      FRONTEND: 'frontend',
+      SOLIDITY: 'solidity',
+      ETHEREUM: 'ethereum',
+      ARCHITECTURE: 'architecture',
+      BACKEND: 'backend',
+      AWS: '',
+      LAMBDA: '',
+      DYNAMODB: '',
+      APIGATEWAY: '',
+      ROUTE53: '',
+      S3: '',
+      CLOUDFRONT: '',
+    },
     BLOCKCHAIN: {
       TITLE: 'Blockchain',
       SUBTITLE: "Ethereum Smart Contracts, Private Blockchain Forks, App Integration",
-      EXAMPLES: [],
+      EXAMPLES: {
+        ARK: {
+          DESCRIPTION: 'Participate in the FOSS effort by making contributions to various Ark Ecosystem Github repositories.'
+        },
+        ARTDECENTER: {
+          DESCRIPTION: 'Lead engineer for artdecenter, a decentralized art marketplace.'
+        }
+      },
     },
     BLOG: {
       TITLE: 'Blog, E-commerce & more',
@@ -53,7 +80,11 @@ export default {
     CLOUD: {
       TITLE: 'Cloud',
       SUBTITLE: 'Cloud-native Backends, Low-cost Infrastructure Deployment & Maintenance, Machine Learning Pipelines',
-      EXAMPLES: [],
+      EXAMPLES: {
+        THROWAWAY: {
+          DESCRIPTION: 'Build a chat application from the ground-up with self-destructing rooms and a disposable feel.'
+        }
+      },
     
     },
     MULTIMEDIA: {
